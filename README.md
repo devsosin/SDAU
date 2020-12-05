@@ -9,7 +9,7 @@
 빠른 시간안에 데이터 분석을 **효율적으로**하기 위해 잡다한 코드를 작성할 필요 없이
 사용법만 익힘으로써 효과적인 결과를 얻기 위해서 패키지로 구축
 
-> [사용법 상세설명 티스토리](https://wolfy.tistory.com/)
+> [사용법 상세설명 티스토리](https://wolfy.tistory.com/category/%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EB%B6%84%EC%84%9D/PYTHON)
 
 ### 최종 목표
 

@@ -33,7 +33,7 @@ class FileMaker():
                         return self.FILE_PATH
 
     def Make_File(self):
-        self.FILE = open(self.FILE_PATH + str(self.FILE_NUMBER).zfill(3) + self.FILE_TYPE, 'a')
+        self.FILE = open(self.FILE_PATH + str(self.FILE_NUMBER).zfill(3) + self.FILE_TYPE, 'a', -1, 'utf-8')
     
     def Write_Data(self, data, spliter='\n'):
         if self.DATA_COUNT:
@@ -123,9 +123,9 @@ def File_Search(FOLDER_DIR, FILE_TYPE='.', ONLY_FOLDER=False):
         FILE_NAMES = list(filter(lambda i : i if FILE_TYPE in i else None, FILE_NAMES))
         return list(map(lambda i : os.path.join(FOLDER_DIR, i), FILE_NAMES))
 
-def Change_Name(FOLDER_PATH, FILE_TYPE, TARGET_NAME):
+def Change_Name(FOLDER_PATH, FILE_TYPE, TARGET_NAME, TARGET_TYPE):
     for i, name in enumerate(File_Search(FOLDER_PATH, FILE_TYPE)):
-        os.rename(name, os.path.join(FOLDER_PATH, '%s_%s%s'%(TARGET_NAME, i, FILE_TYPE)))
+        os.rename(name, os.path.join(FOLDER_PATH, '%s_%s%s'%(TARGET_NAME, i, TARGET_TYPE)))
 
 # 파일 삭제
 # os.remove(path, option)
